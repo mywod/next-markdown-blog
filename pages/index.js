@@ -1,17 +1,17 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Head from 'next/head'
+
 import Post from '../components/Post'
+import Navbar from '../components/Navbar'
 import { sortByDate } from '../utils'
 
 export default function Home({ posts }) {
   return (
+    
     <div>
-      <Head>
-        <title>Dev Blog</title>
-      </Head>
-
+       <Navbar />
+     
       <div className='posts'>
         {posts.map((post, index) => (
           <Post key={index} post={post} />

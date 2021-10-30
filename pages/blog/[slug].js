@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import marked from 'marked'
 import Link from 'next/link'
+import Navbar from '/components/Navbar'
 
 export default function PostPage({
   frontmatter: { title, date, cover_image },
@@ -11,9 +12,7 @@ export default function PostPage({
 }) {
   return (
     <>
-      <Link href='/'>
-        <a className='btn btn-back'>Go Back</a>
-      </Link>
+      <Navbar/>
       <div className='card card-page'>
         <h1 className='post-title'>{title}</h1>
         <div className='post-date'>Posted on {date}</div>
